@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entrada no Sistema</title>
+        <style>
+            input {
+                border-radius: 20px;
+                padding: 5px;
+                
+            }
+            fieldset {
+                border-radius: 10px;
+            }
+            button {
+                border-radius: 10px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="top-bar">Sistema</header>
+        <div class="main-container">
+            <form method="post" id="Login" action="~/login.cshtml">
+                <fieldset id="login-fs">
+                    <legend>Credenciais de Usuário</legend>
+                    <p><label for="iEmail">E-mail: </label><input type="email" name="email" id="iEmail" size="30" maxlength="40" placeholder="Insira seu E-mail." required /> <br /></p>
+                    <p><label for="iSenha">Senha: &nbsp;</label><input type="password" name="senha" id="iSenha" size="15" maxlength="15" minlength="8" placeholder="Insira sua senha." required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.*\d)(?![.\n]).{8,15}$"/></p>
+                    <p><button type="submit">Entrar</button></p>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
